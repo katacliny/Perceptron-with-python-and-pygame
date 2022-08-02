@@ -2,8 +2,8 @@ from dis import dis
 from typing import List
 import pygame as py
 import random as r
-from Perceptron.point import Point  # type: ignore
-from Perceptron.perceptron import Perceptron  # type: ignore
+from point import Point  # type: ignore
+from perceptron import Perceptron  # type: ignore
 
 # SUM = x0 * w0 + x1 * w1
 # DIGN(N) if n > 0 -> 1 else -> -1
