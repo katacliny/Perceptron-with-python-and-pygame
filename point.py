@@ -1,5 +1,5 @@
 import pygame as py
-from .abstractions import APoint
+from abstractions import APoint  # type: ignore
 
 
 class Point(APoint):

@@ -1,6 +1,6 @@
 import random as r
 from typing import List
-from .abstractions import APerceptron
+from abstractions import APerceptron
 
 
 class Perceptron(APerceptron):
