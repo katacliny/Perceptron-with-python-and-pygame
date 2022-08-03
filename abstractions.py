@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 class APerceptron(ABC):
     @abstractmethod
-    def set_inputs(self, inputs: tuple[float, float]) -> None:
+    def set_inputs(self, inputs: tuple[float, float, float]) -> None:
         """"""
 
     @abstractmethod

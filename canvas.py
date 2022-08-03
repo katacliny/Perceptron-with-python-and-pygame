@@ -1,3 +1,4 @@
+from audioop import bias
 from dis import dis
 from typing import List
 import pygame as py
@@ -32,7 +33,7 @@ for x in range(500):
 # train the perceptron
 
 for pt in training_points:
-    perceptron.set_inputs(pt.pos)
+    perceptron.set_inputs((*pt.pos, pt.bias))
     perceptron.train(pt.label)
 
 # end
@@ -59,7 +60,7 @@ while True:
     py.draw.aaline(display, (0, 0, 0), p1.get_translated_pos(), p2.get_translated_pos())
     for p in test_points:
         # predict
-        perceptron.set_inputs(p.pos)
+        perceptron.set_inputs((*p.pos, p.bias))
         p.label = perceptron.guess()
         p.draw()
         # end

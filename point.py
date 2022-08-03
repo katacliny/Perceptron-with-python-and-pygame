@@ -30,6 +30,7 @@ class Point(APoint):
         self.display: py.surface = dipsplay
         line_y: float = f(self.pos[0])
         self.label: int = (1 if self.pos[1] > line_y else -1) if train else 0
+        self.bias: float = 1
 
     def draw(self) -> None:
         color: tuple[int, int, int] = (250, 0, 0) if self.label == 1 else (0, 255, 0)
