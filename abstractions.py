@@ -23,3 +23,7 @@ class APoint(ABC):
     @abstractmethod
     def draw(self) -> None:
         """"""
+
+    @abstractmethod
+    def get_translated_pos(self) -> tuple[int, int]:
+        """"""

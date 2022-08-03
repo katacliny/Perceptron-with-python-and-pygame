@@ -5,6 +5,7 @@ import random as r
 from point import Point  # type: ignore
 from perceptron import Perceptron  # type: ignore
 from settings import h, w
+from utils import f
 
 # SUM = x0 * w0 + x1 * w1
 # DIGN(N) if n > 0 -> 1 else -> -1
@@ -19,11 +20,6 @@ test_points: List[Point] = []
 pos_y: float
 pos_x: float
 # create the points for train
-
-
-def f(x: float) -> float:
-    # y = mx + b
-    return 3 * x + 2
 
 
 for x in range(500):
@@ -56,7 +52,11 @@ while True:
             py.quit()
             quit()
     display.fill((255, 255, 255))
-    py.draw.line(display, (0, 0, 0), (0, h), (w, 0))
+    # py.draw.line(display, (0, 0, 0), (0, h), (w, 0))
+    p1: Point = Point((-1, f(-1)), display)
+    p2: Point = Point((1, f(1)), display)
+
+    py.draw.aaline(display, (0, 0, 0), p1.get_translated_pos(), p2.get_translated_pos())
     for p in test_points:
         # predict
         perceptron.set_inputs(p.pos)
