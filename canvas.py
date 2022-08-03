@@ -20,6 +20,12 @@ pos_y: float
 pos_x: float
 # create the points for train
 
+
+def f(x: float) -> float:
+    # y = mx + b
+    return 3 * x + 2
+
+
 for x in range(500):
     pos_y = r.uniform(-1, 1)
     pos_x = r.uniform(-1, 1)

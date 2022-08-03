@@ -3,7 +3,7 @@ from abstractions import APoint  # type: ignore
 from settings import h, w
 
 
-def translate(value: float, leftMin: int, leftMax: int, rightMin: int, rightMax: int):
+def translate(value: float, leftMin: int, leftMax: int, rightMin: int, rightMax: int) -> float:
     # Figure out how 'wide' each range is
     leftSpan = leftMax - leftMin
     rightSpan = rightMax - rightMin
