@@ -4,16 +4,16 @@ from abstractions import APerceptron
 
 
 class Perceptron(APerceptron):
-    def __init__(self, inputs: tuple[int, int] = (0, 0)):
+    def __init__(self, inputs: tuple[float, float] = (0, 0)):
         self.possible_weights: tuple[float, float] = (-1, 1)
         self.weights: List[float] = [
             r.choice(self.possible_weights),
             r.choice(self.possible_weights),
         ]
-        self.inputs: tuple[int, int] = inputs
+        self.inputs: tuple[float, float] = inputs
         self.lr: float = 0.1
 
-    def set_inputs(self, inputs: tuple[int, int]) -> None:
+    def set_inputs(self, inputs: tuple[float, float]) -> None:
         self.inputs = inputs
 
     def sign(self, n: float) -> int:
